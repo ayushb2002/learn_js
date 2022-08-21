@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colored
+        {
+            width: 100px;
+            height: 100px;
+            padding: 5%;
+            margin: 5%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="colored">
+        I am a colored div.
+    </div>
+    <button id="btn1" onclick="myfun(this.id)" data-color="blue">Blue</button>
+    <button id="btn2" onclick="myfun(this.id)" data-color="green">Green</button>
+    <button id="btn3" onclick="myfun(this.id)" data-color="yellow">Yellow</button>
+    <button id="btn4" onclick="myfun(this.id)" data-color="red">Red</button>
+    
+    <script>
+        function myfun(id)
+        {
+            let color = document.getElementById(id).dataset.color;
+            document.querySelector("#colored").style.backgroundColor = color;
+        }
+        
+    </script>
+</body>
+</html>
